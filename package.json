@@ -1,0 +1,65 @@
+{
+  "name": "angularjs-electron-scaffold",
+  "version": "1.0.0",
+  "description": "AngularJS + Electron scaffold",
+  "main": "./app/main.js",
+  "author": "fjperez@profile.es",
+  "license": "ISC",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp start",
+    "release:win": "./node_modules/.bin/gulp build --platform=windows",
+    "release:linux": "./node_modules/.bin/gulp build --platform=linux",
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "build": {
+    "appId": "com.profile.angularjs-electron-scaffold",
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "publish": null
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "electron": "^1.6.11",
+    "electron-builder": "^19.13.0",
+    "electron-connect": "^0.6.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-copy": "^1.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-karma": "0.0.5",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-watch": "^4.3.11",
+    "jasmine-core": "^2.6.3",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-electron": "^5.2.1",
+    "karma-jasmine": "^1.1.0",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^1.2.2",
+    "yargs": "^8.0.1"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.3",
+    "angular-animate": "^1.6.3",
+    "angular-aria": "^1.6.3",
+    "angular-messages": "^1.6.4",
+    "angular-mocks": "^1.6.3",
+    "angular-resource": "^1.6.3",
+    "angular-sanitize": "^1.6.3",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.4"
+  }
+}

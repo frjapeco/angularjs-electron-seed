@@ -1,0 +1,23 @@
+<html ng-app="angularjs-electron-seed">
+
+<head>
+  <!-- vendor:css -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+
+<body>
+  <ui-view></ui-view>
+  <!-- @if ENVIROMENT='development' -->
+  <script>
+    require('electron-connect').client.create()
+  </script>
+  <!-- @endif -->
+  <!-- vendor:js -->
+  <!-- endinject -->
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+
+</html>

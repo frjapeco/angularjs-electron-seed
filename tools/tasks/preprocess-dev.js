@@ -1,0 +1,16 @@
+var config          = require('../config/project-config'),
+    electron        = require('electron-connect').server.create(),
+    gulp            = require('gulp'),
+    preprocess      = require('gulp-preprocess');
+
+gulp.task('preprocess-dev', function() {
+  var src = [
+    config.APP_DIR + '/**/*.html',
+    config.APP_DIR + '/**/*.js'
+  ];
+
+  return gulp
+    .src(src)
+    .pipe(preprocess({ context: { ENVIROMENT: 'development'} }))
+    .pipe(gulp.dest(config.APP_DIR));
+});

@@ -1,0 +1,75 @@
+<div class="container">
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <img class="col-md-12 col-sm-12" src="./assets/electron-logo.svg"/>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row">
+    <!-- Login form -->
+    <div class="col-md-4 col-md-offset-4">
+      <form
+        name="vm.form"
+        class="validable-form well"
+        ng-submit="vm.auth()"
+        novalidate>
+        <!-- User field -->
+        <div
+          class="form-group"
+          ng-class="{'has-error': vm.form.$submitted && vm.form.user.$invalid}">
+          <input
+            name="user"
+            class="form-control"
+            type="text"
+            ng-model="vm.user"
+            placeholder="Usuario"
+            required>
+          <div
+            class="help-block"
+            ng-messages="vm.form.$submitted && vm.form.user.$error">
+            <div ng-messages-include="./templates/error-messages.html"></div>
+          </div>
+        </div>
+        <br/>
+        <!-- Pass field -->
+        <div
+          class="form-group"
+          ng-class="{'has-error': vm.form.$submitted && vm.form.pass.$invalid}">
+          <input
+            name="pass"
+            class="form-control"
+            type="password"
+            ng-model="vm.pass"
+            placeholder="Contrasena"
+            required/>
+          <div
+            class="help-block"
+            ng-messages="vm.form.$submitted && vm.form.pass.$error">
+            <div ng-messages-include="./templates/error-messages.html"></div>
+          </div>
+        </div>
+        <br/>
+        <!-- Submit button -->
+        <input
+          class="btn btn-primary"
+          type="submit"
+          value="Entrar"
+          style="width: 100%"/>
+        <br/>
+        <br/>
+      </form>
+      <!-- Alert message -->
+      <div
+        uib-alert
+        template-url="./templates/alert.html"
+        ng-if="vm.alert.visible"
+        ng-class="'alert-' + vm.alert.type"
+        close="vm.alert.visible = false">
+        <div ng-bind="vm.alert.message"></div>
+      </div>
+    </div>
+  </div>
+</div>
