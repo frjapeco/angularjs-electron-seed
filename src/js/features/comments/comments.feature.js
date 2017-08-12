@@ -6,7 +6,7 @@
     .component('comments', {
       templateUrl: './js/features/comments/comments.feature.html',
       controllerAs: 'vm',
-      controller: ['$uibModal', 'commentsService', function CommentsCtrl($uibModal, commentsService) {
+      controller: ['$log', '$uibModal', 'commentsService', function CommentsCtrl($log, $uibModal, commentsService) {
         var vm = this;
         vm.comment = '';
 
@@ -18,6 +18,7 @@
               });
             })
             .catch(function(err) {
+              $log.error(err);
               $uibModal.open({
                 component: 'commentErrorModal'
               });

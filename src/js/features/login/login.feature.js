@@ -11,7 +11,6 @@
 
       vm.alert = { visible: false };
       vm.auth = function() {
-        var myvar = 2
         if (vm.form.$invalid) {
           return;
         }
